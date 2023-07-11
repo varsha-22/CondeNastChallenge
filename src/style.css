@@ -1,0 +1,94 @@
+/* CSS */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif; 
+  color: #333; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 225px !important;
+  padding-right: 0;
+  background: #fff;
+  transition: left .5s ease-out, padding-top .5s ease-in-out;
+  transform: translateZ(0);
+  height: 100%;
+  overflow-x: hidden;
+  z-index: 10011;
+  border-right: 1px solid #e5e7eb;
+  box-shadow: inset -6px 4px 14px rgba(0,0,0,.05);
+  overflow-y: hidden;
+  direction: ltr;
+}
+
+.overview {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  left: 0;
+  margin: 15px 4px 31px 264px;
+  transition: opacity .4s ease-out, left .7s ease;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 97%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style: none; 
+}
+
+.pagination-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold; 
+  font-size: 14px; 
+}
+
+.pagination-button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .overview {
+    flex-grow: 1;
+    padding: 20px;
+  }
+}
