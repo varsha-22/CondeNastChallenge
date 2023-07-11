@@ -29,7 +29,6 @@ export const Navigation = () => {
     e.preventDefault();
     const targetTagName = e.target.tagName.toLowerCase();
     if (targetTagName !== "a") {
-      console.log(`toggle first level`, e.target, value);
       const updatedOptions = navOptions.map((item) =>
         value === item.id ? { ...item, isExpanded: !item.isExpanded } : item
       );
