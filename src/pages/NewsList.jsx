@@ -14,9 +14,6 @@ export const NewsList = () => {
     const fetchNewsArticles = async () => {
       try {
         const response = await data;
-
-        console.log(response);
-
         setNewsArticles(response.articles);
       } catch (error) {
         console.error("Error fetching news articles:", error);
